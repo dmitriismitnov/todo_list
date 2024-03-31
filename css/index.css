@@ -1,7 +1,9 @@
 @import url("reset.css");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,300");
 @import url("ui-kit.css");
-
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+}
 
 * {
     box-sizing: border-box;
@@ -39,21 +41,6 @@
     justify-content: center;
     align-items: stretch;
     gap: 10px;
-}
-
-.workspace-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    gap: 10px;
-}
-
-.workspace-main-header {
-    padding: 14px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .workspace-categories {
@@ -98,7 +85,22 @@
     padding: 20px;
 }
 
-.workspace-main-body-container {
+.workspace-tasks {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 10px;
+}
+
+.workspace-tasks-header {
+    padding: 14px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workspace-tasks-body-container {
     overflow: hidden;
     flex: 1;
     display: flex;
@@ -107,12 +109,12 @@
 
 }
 
-.workspace-main-body-content {
+.workspace-tasks-body-list {
     overflow-y: auto;
     flex: 1;
 }
 
-.workspace-main-body-task-tile {
+.workspace-tasks-body-task-tile {
     padding: 27px 20px;
     border-bottom: 1px solid #FFFFFF;
     display: flex;
@@ -121,7 +123,7 @@
     gap: 10px;
 }
 
-.workspace-main-body-task-tile-real-checkbox {
+.workspace-tasks-body-task-tile-real-checkbox {
     width: 0;
     height: 0;
     opacity: 0;
@@ -129,7 +131,7 @@
     z-index: -1;
 }
 
-.workspace-main-body-task-tile-custom-checkbox {
+.workspace-tasks-body-task-tile-custom-checkbox {
     position: relative;
     display: inline-block;
     width: 30px;
@@ -142,7 +144,7 @@
     transition: 0.2s ease-in;
 }
 
-.workspace-main-body-task-tile-custom-checkbox::before {
+.workspace-tasks-body-task-tile-custom-checkbox::before {
     content: "";
     display: inline-block;
     width: 30px;
@@ -157,15 +159,15 @@
     transition: 0.2s ease-in;
 }
 
-.workspace-main-body-task-tile-real-checkbox:checked~.workspace-main-body-task-tile-custom-checkbox::before {
+.workspace-tasks-body-task-tile-real-checkbox:checked~.workspace-tasks-body-task-tile-custom-checkbox::before {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.workspace-main-body-task-tile-real-checkbox:checked~.workspace-main-body-task-tile-custom-checkbox {
+.workspace-tasks-body-task-tile-real-checkbox:checked~.workspace-tasks-body-task-tile-custom-checkbox {
     border-color: #4CAF50;
 }
 
-.workspace-main-body-footer {
+.workspace-tasks-body-filters {
     padding: 12px;
     display: flex;
     justify-content: center;
@@ -173,7 +175,7 @@
     gap: 10px;
 }
 
-.filter-text-button-active {
+.workspace-tasks-body-filters-filter-active {
     color: #F6F6F6 !important;
     cursor: auto;
 }
