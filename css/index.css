@@ -1,6 +1,10 @@
 @import url("reset.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,300");
 
+* {
+    box-sizing: border-box;
+}
+
 .root {
     height: 100vh;
     display: flex;
@@ -59,9 +63,55 @@
 
 .workspace-main-body-task-tile {
     padding: 27px 20px;
-    border-bottom: 1px solid #FFFFFF
+    border-bottom: 1px solid #FFFFFF;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    gap: 10px;
 }
+
+
+.workspace-main-body-task-tile-real-checkbox {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.workspace-main-body-task-tile-custom-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border: 2px solid #4CAF50;
+    border-radius: 15px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.workspace-main-body-task-tile-custom-checkbox::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/check-completed.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease-in;
+}
+
+.workspace-main-body-task-tile-real-checkbox:checked~.workspace-main-body-task-tile-custom-checkbox::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
 
 .surface {
     background-color: #38938A;
 }
+
