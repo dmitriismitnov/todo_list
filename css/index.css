@@ -1,0 +1,67 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,300");
+
+.root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-title {
+    color: #E9C597;
+    font-size: 32px;
+    font-family: "Open Sans";
+    font-weight: bold;
+    line-height: 0.9;
+}
+
+.workspace {
+    height: 80vh;
+    padding-bottom: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.workspace-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 10px;
+}
+
+.workspace-main-body-container {
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+}
+
+.workspace-main-body-content {
+    overflow-y: auto;
+    flex: 1;
+}
+
+.workspace-main-body-task-tile {
+    padding: 27px 20px;
+    border-bottom: 1px solid #FFFFFF
+}
+
+.surface {
+    background-color: #38938A;
+}
