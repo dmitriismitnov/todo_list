@@ -1,10 +1,7 @@
 @import url("reset.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,300");
+@import url("ui-kit.css");
 
-:root {
-    --surface-bg-color: #54BAB9;
-    --surface-radius: 10px;
-}
 
 * {
     box-sizing: border-box;
@@ -73,26 +70,10 @@
     gap: 15px;
 }
 
-.workspace-categories-header-title {
-    color: #F6F6F6;
-    font-family: "Open Sans";
-    line-height: 0.9;
-    font-weight: bolder;
-    font-size: 20px;
-}
-
 .workspace-categories-header-title-line {
     background: #E4E4E4;
     height: 1px;
     flex: 1;
-}
-
-.workspace-categories-header-title {
-    color: #F6F6F6;
-    font-family: "Open Sans";
-    line-height: 0.9;
-    font-weight: bolder;
-    font-size: 20px;
 }
 
 .workspace-categories-body {
@@ -100,16 +81,11 @@
     overflow-y: auto;
 }
 
-.workspace-categories-body-category {
+.workspace-categories-body-category-container {
     padding: 5px 20px;
 }
 
-.workspace-categories-body-category div {
-    color: #FFFFFF;
-    font-family: "Open Sans";
-    line-height: 0.9;
-    font-weight: 100;
-    font-size: 20px;
+.workspace-categories-body-category {
     background: #4CAF50;
     padding: 5px;
     border-radius: 10px;
@@ -189,14 +165,6 @@
     border-color: #4CAF50;
 }
 
-.workspace-main-body-task-tile-description {
-    color: #FFFFFF;
-    font-family: "Open Sans";
-    line-height: 0.9;
-    font-weight: 100;
-    font-size: 20px;
-}
-
 .workspace-main-body-footer {
     padding: 12px;
     display: flex;
@@ -209,35 +177,3 @@
     color: #F6F6F6 !important;
     cursor: auto;
 }
-
-
-.surface {
-    background-color: var(--surface-bg-color);
-    box-shadow: 0px 5px #38938a;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-
-.button-surface {
-    background-color: #38938A;
-    border-radius: 10px;
-    padding: 6px 30px;   
-    color: #F6F6F6;
-    font-family: "Open Sans";
-    line-height: 0.9;
-    font-weight: bolder;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-
-.button-text {
-    color: #1D8A8A;
-    cursor: pointer;
-    font-family: "Open Sans";
-    font-weight: bold;
-    line-height: 0.9;
-    font-size: 20px;
-}
-
