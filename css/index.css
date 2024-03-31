@@ -1,6 +1,11 @@
 @import url("reset.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,300");
 
+:root {
+    --surface-bg-color: #54BAB9;
+    --surface-radius: 10px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -47,6 +52,13 @@
     gap: 10px;
 }
 
+.workspace-main-header {
+    padding: 14px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .workspace-main-body-container {
     overflow: hidden;
     flex: 1;
@@ -70,7 +82,6 @@
     gap: 10px;
 }
 
-
 .workspace-main-body-task-tile-real-checkbox {
     width: 0;
     height: 0;
@@ -85,10 +96,11 @@
     width: 30px;
     height: 30px;
     background: white;
-    border: 2px solid #4CAF50;
+    border: 2px solid var(--surface-bg-color);
     border-radius: 15px;
     flex-shrink: 0;
     cursor: pointer;
+    transition: 0.2s ease-in;
 }
 
 .workspace-main-body-task-tile-custom-checkbox::before {
@@ -110,8 +122,59 @@
     transform: translate(-50%, -50%) scale(1);
 }
 
+.workspace-main-body-task-tile-real-checkbox:checked~.workspace-main-body-task-tile-custom-checkbox {
+    border-color: #4CAF50;
+}
+
+.workspace-main-body-task-tile-description {
+    color: #FFFFFF;
+    font-family: "Open Sans";
+    line-height: 0.9;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.workspace-main-body-footer {
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-text-button-active {
+    color: #F6F6F6 !important;
+    cursor: auto;
+}
+
 
 .surface {
+    background-color: var(--surface-bg-color);
+    box-shadow: 0px 5px #38938a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.button-surface {
     background-color: #38938A;
+    border-radius: 10px;
+    padding: 6px 30px;   
+    color: #F6F6F6;
+    font-family: "Open Sans";
+    line-height: 0.9;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.button-text {
+    color: #1D8A8A;
+    cursor: pointer;
+    font-family: "Open Sans";
+    font-weight: bold;
+    line-height: 0.9;
+    font-size: 20px;
 }
 
